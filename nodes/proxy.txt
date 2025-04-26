@@ -1,1 +1,1 @@
-https://ghproxy.net
+https://api-gh.muran.eu.org
