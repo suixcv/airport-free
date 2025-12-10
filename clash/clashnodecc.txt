@@ -1,4 +1,436 @@
-未获取到节点，错误代码：404 Client Error: Not Found for url: https://node.clashnode.cc/uploads/2025/12/0-20251210.yaml
+# ;дёҚиҰҒйҡҸж„Ҹж”№еҸҳе…ій”®еӯ—пјҢеҗҰеҲҷдјҡеҜјиҮҙеҮәй”ҷ
+# ;acl4SSRи§„еҲҷ
+# ;еҺ»е№ҝе‘Ҡпјҡж”ҜжҢҒ
+# ;иҮӘеҠЁжөӢйҖҹпјҡж”ҜжҢҒ
+# ;еҫ®иҪҜеҲҶжөҒпјҡдёҚж”ҜжҢҒ
+# ;иӢ№жһңеҲҶжөҒпјҡдёҚж”ҜжҢҒ
+# ;еўһејәдёӯеӣҪIPж®өпјҡдёҚж”ҜжҢҒ
+# ;еўһејәеӣҪеӨ–GFWпјҡдёҚж”ҜжҢҒ
+# ;ruleset=рҹҺҜ е…Ёзҗғзӣҙиҝһ,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: hysteria
+    name: рҹҮ«рҹҮ·_FR_жі•еӣҪ
+    server: 195.154.200.40
+    port: 15010
+    auth-str: dongtaiwang.com
+    protocol: udp
+    sni: apple.com
+    up: "100"
+    down: "100"
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - type: hysteria
+    name: рҹҮәрҹҮё_US_зҫҺеӣҪ
+    server: 51.159.226.1
+    port: 49003
+    auth-str: dongtaiwang.com
+    protocol: udp
+    sni: apple.com
+    up: "11"
+    down: "55"
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ
+    server: 4cd36d8f-t6pb40-tonrqx-1khwf.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+    sni: 4cd36d8f-t6pb40-tonrqx-1khwf.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_1
+    server: b0d0563d-t6r5s0-taz53d-1j0y6.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 1cce7df2-251c-11ee-9409-f23c9164ca5d
+    sni: b0d0563d-t6r5s0-taz53d-1j0y6.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_2
+    server: f92321f2-t6r5s0-t7vzvm-1j0a4.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 4eedcde6-d16a-11ef-973a-f23c913c8d2b
+    sni: f92321f2-t6r5s0-t7vzvm-1j0a4.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_3
+    server: 21d94221-t6pb40-tdps9l-155d9.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 34f0cf42-0f8a-11ec-a8bf-f23c91cfbbc9
+    sni: 21d94221-t6pb40-tdps9l-155d9.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_4
+    server: 1efe8341-t6pb40-td95qh-1isea.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: d6abdbda-fe9d-11ec-bb74-f23c9164ca5d
+    sni: 1efe8341-t6pb40-td95qh-1isea.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_5
+    server: ab41cc25-t6r5s0-tdahby-1tnab.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: ca9c0c54-1513-11f0-8a7b-f23c913c8d2b
+    sni: ab41cc25-t6r5s0-tdahby-1tnab.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_6
+    server: 0e681e5b-t6pb40-t8ivpf-z65w.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+    sni: 0e681e5b-t6pb40-t8ivpf-z65w.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_7
+    server: 7ae29732-t6t0g0-tkp3tl-1s09x.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 62b7824e-47dc-11ef-9f2d-f23c9164ca5d
+    sni: 7ae29732-t6t0g0-tkp3tl-1s09x.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_8
+    server: 89ac33ca-t6pb40-tbcla6-194tt.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 602e99aa-718d-11eb-b77b-f23c913c8d2b
+    sni: 89ac33ca-t6pb40-tbcla6-194tt.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_9
+    server: 29d44efc-t6pb40-tfeciy-1iddy.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: e168c43e-c6d9-11ed-a8bf-f23c91cfbbc9
+    sni: 29d44efc-t6pb40-tfeciy-1iddy.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_10
+    server: 260e25c8-t6pb40-t7j1ub-g3b3.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 9ad05870-d8c5-11ef-9f1c-f23c913c8d2b
+    sni: 260e25c8-t6pb40-t7j1ub-g3b3.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_11
+    server: d15b0a2f-t6pb40-tc61cs-1tja8.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: d2f0bee2-02f1-11f0-8eb0-f23c9164ca5d
+    sni: d15b0a2f-t6pb40-tc61cs-1tja8.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_12
+    server: f8703d1a-t6r5s0-tb016b-1m7l4.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: bd515574-3b10-11ee-ac14-f23c9164ca5d
+    sni: f8703d1a-t6r5s0-tb016b-1m7l4.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_13
+    server: 9e157430-t6pb40-t9hghw-1sdoq.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 7c077572-6da9-11ef-b786-f23c91cfbbc9
+    sni: 9e157430-t6pb40-t9hghw-1sdoq.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_14
+    server: 407b0f79-t6r5s0-tm3dx0-1r9dt.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: de003c72-0157-11ef-86da-f23c91cfbbc9
+    sni: 407b0f79-t6r5s0-tm3dx0-1r9dt.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_15
+    server: 7ea417a7-t6pb40-tnt75r-1k8ga.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: f860f2da-5035-11ed-bb74-f23c9164ca5d
+    sni: 7ea417a7-t6pb40-tnt75r-1k8ga.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_16
+    server: ec23962f-t6r5s0-t9lm1q-1p1b.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 279b8588-616b-11ed-a8bf-f23c91cfbbc9
+    sni: ec23962f-t6r5s0-t9lm1q-1p1b.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_17
+    server: 11c6c1ec-t6r5s0-tdfzix-fm2v.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 3fed19ea-1671-11f0-bd2e-f23c9164ca5d
+    sni: 11c6c1ec-t6r5s0-tdfzix-fm2v.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_18
+    server: 17cf0999-t6t0g0-t8ivpf-z65w.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+    sni: 17cf0999-t6t0g0-t8ivpf-z65w.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_19
+    server: 21230cae-t6r5s0-tk4rx8-1n7d9.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 48e51dfa-db8f-11ed-a23f-f23c91369f2d
+    sni: 21230cae-t6r5s0-tk4rx8-1n7d9.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_20
+    server: 836370d5-t6r5s0-tkp3tl-1s09x.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 62b7824e-47dc-11ef-9f2d-f23c9164ca5d
+    sni: 836370d5-t6r5s0-tkp3tl-1s09x.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_21
+    server: 135f5a03-t6pb40-t7hmka-1plv4.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 28213b50-7ed5-11ee-add6-f23c91369f2d
+    sni: 135f5a03-t6pb40-t7hmka-1plv4.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_22
+    server: 11c76ef0-t6r5s0-th9kx9-1os43.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 96c798f6-4645-11ee-b8a1-f23c9164ca5d
+    sni: 11c76ef0-t6r5s0-th9kx9-1os43.hk2.hyhuawei.com
+  - type: hysteria2
+    name: рҹҮЁрҹҮі_CN_дёӯеӣҪ_23
+    server: c2ea438e-t6r5s0-t95ncr-1slop.hk2.hyhuawei.com
+    port: 443
+    ports: 30000-60000
+    password: 520b9126-9870-11ef-81b0-f23c9164ca5d
+    sni: c2ea438e-t6r5s0-t95ncr-1slop.hk2.hyhuawei.com
+proxy-groups:
+  - name: рҹҡҖ иҠӮзӮ№йҖүжӢ©
+    type: select
+    proxies:
+      - вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+      - DIRECT
+      - рҹҮ«рҹҮ·_FR_жі•еӣҪ
+      - рҹҮәрҹҮё_US_зҫҺеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_1
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_2
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_3
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_4
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_5
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_6
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_7
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_8
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_9
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_10
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_11
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_12
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_13
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_14
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_15
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_16
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_17
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_18
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_19
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_20
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_21
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_22
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_23
+  - name: вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+    type: url-test
+    proxies:
+      - рҹҮ«рҹҮ·_FR_жі•еӣҪ
+      - рҹҮәрҹҮё_US_зҫҺеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_1
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_2
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_3
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_4
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_5
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_6
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_7
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_8
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_9
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_10
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_11
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_12
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_13
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_14
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_15
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_16
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_17
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_18
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_19
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_20
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_21
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_22
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_23
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: рҹҺҜ е…Ёзҗғзӣҙиҝһ
+    type: select
+    proxies:
+      - DIRECT
+      - рҹҡҖ иҠӮзӮ№йҖүжӢ©
+      - вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+  - name: рҹӣ‘ е…ЁзҗғжӢҰжҲӘ
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: рҹҗҹ жјҸзҪ‘д№Ӣйұј
+    type: select
+    proxies:
+      - рҹҡҖ иҠӮзӮ№йҖүжӢ©
+      - рҹҺҜ е…Ёзҗғзӣҙиҝһ
+      - вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+      - рҹҮ«рҹҮ·_FR_жі•еӣҪ
+      - рҹҮәрҹҮё_US_зҫҺеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_1
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_2
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_3
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_4
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_5
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_6
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_7
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_8
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_9
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_10
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_11
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_12
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_13
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_14
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_15
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_16
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_17
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_18
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_19
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_20
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_21
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_22
+      - рҹҮЁрҹҮі_CN_дёӯеӣҪ_23
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - RULE-SET,BanAD,рҹӣ‘ е…ЁзҗғжӢҰжҲӘ
+  - RULE-SET,BanProgramAD,рҹӣ‘ е…ЁзҗғжӢҰжҲӘ
+  - RULE-SET,GoogleCN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - RULE-SET,SteamCN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - RULE-SET,Telegram,рҹҡҖ иҠӮзӮ№йҖүжӢ©
+  - RULE-SET,ProxyMedia,рҹҡҖ иҠӮзӮ№йҖүжӢ©
+  - RULE-SET,ProxyLite,рҹҡҖ иҠӮзӮ№йҖүжӢ©
+  - RULE-SET,ChinaDomain,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - RULE-SET,ChinaCompanyIp,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - GEOIP,CN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - MATCH,рҹҗҹ жјҸзҪ‘д№Ӣйұј
 port: 7890
 socks-port: 7891
 allow-lan: true
