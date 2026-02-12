@@ -459,7 +459,7 @@ vless://c2b6ef4f-58b5-34df-a9b2-b9423df641d9@s213.okgfw.top:443?encryption=none&
 vless://c2b6ef4f-58b5-34df-a9b2-b9423df641d9@s492.okgg.top:443?encryption=none&type=tcp&headerType=none&fp=random&host=s492.okgg.top&path=&flow=xtls-rprx-vision&security=tls&sni=u729804ub39fs492.okgg.top&serviceName=&mode=&alpn=#DE%20VLESS-196%20%7C%20free-nodes
 vless://c2b6ef4f-58b5-34df-a9b2-b9423df641d9@s493.okgg.top:443?encryption=none&type=tcp&headerType=none&fp=random&host=s493.okgg.top&path=&flow=xtls-rprx-vision&security=tls&sni=u729804u6631s493.okgg.top&serviceName=&mode=&alpn=#DE%20VLESS-197%20%7C%20free-nodes
 vless://c2b6ef4f-58b5-34df-a9b2-b9423df641d9@s52.okgg.top:443?encryption=none&type=tcp&headerType=none&fp=random&host=s52.okgg.top&path=&flow=xtls-rprx-vision&security=tls&sni=u729804uf0f5s52.okgg.top&serviceName=&mode=&alpn=#%E6%9C%AA%E7%9F%A5%20VLESS-198%20%7C%20free-nodes
-未获取到到节点，错误代码:404 Client Error: Not Found for url: https://www.naidounode.com/node/20260212-v2ray.txt
+未获取到到节点，错误代码:500 Server Error: Internal Server Error for url: https://www.naidounode.com/node/20260212-v2ray.txt
 未获取到到节点，错误代码:HTTPSConnectionPool(host='nodefree.githubrowcontent.com', port=443): Max retries exceeded with url: /2026/02/20260212.txt (Caused by NameResolutionError("HTTPSConnection(host='nodefree.githubrowcontent.com', port=443): Failed to resolve 'nodefree.githubrowcontent.com' ([Errno -2] Name or service not known)"))
 未获取到到节点，错误代码:404 Client Error: Not Found for url: https://nodev2ray.com/uploads/2026/02/0-20260212.txt
 未获取到到节点，错误代码:404 Client Error: Not Found for url: https://nodev2ray.com/uploads/2026/02/1-20260212.txt
